@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Формы</title>
+    </head>
+    <body>
+        <table width="700px">
+            <tr>
+                <td valign="top">
+                    <p><b>Простая форма поиска с вариантами:</b></p>
+                    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+                        <fieldset>
+                            <legend>Строка поиска</legend>
+                            <label>
+                                <input type="text" name="text1" maxlength="10" />
+                            </label>
+                            <label>
+                                <input type="submit" value="Искать" /><br>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" value="onsite" checked />
+                                на сайте
+                                <input type="radio" name="radio" value="google" />
+                                в google
+                            </label><br>
+                            <i>Длина запроса не более 10 символов</i>
+                        </fieldset>
+                    </form>
+                </td>
+                <td valign="top">
+                    <p><b>Простая форма поиска с вариантами:</b></p>
+                    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+                        <fieldset>
+                            <legend>Строка поиска</legend>
+                            <label>
+                                <input type="text" name="text1" autofocus /><sup>*</sup>
+                            </label>
+                            <label>
+                                <input type="submit" value="Искать" /><br>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" value="onsite" />
+                                на сайте
+                                <input type="radio" name="radio" value="google" checked />
+                                в google
+                            </label><br>
+                            <i>* - обязательное поле</i><br>
+                            <i>Автофокус в поле поиска</i>
+                        </fieldset>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <p><b>Простая форма авторизации:</b></p>
+                    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+                        <fieldset>
+                            <legend>Авторизируйтесь</legend>
+                            <label>
+                                <input type="text" name="login" /><sup>*</sup>&nbsp;Логин<br>
+                            </label>
+                            <label>
+                                <input type="password" name="password" /><sup>*</sup>&nbsp;Пароль<br>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="check" value="stayLoggedIn"/>
+                                Оставаться в системе
+                            </label><br>
+                            <label>
+                                <input type="submit" value="Войти" /><br>
+                            </label>
+                            <i>* - обязательное поле</i>
+                        </fieldset>
+                    </form>
+                </td>
+                <td valign="top">
+                    <p><b>Опрос(голосование):</b></p>
+                    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+                        <fieldset>
+                            <legend>Как Вам?</legend>
+                            <label>
+                                <input type="radio" name="radio" value="nothing" checked />
+                                ничего<br>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" value="notbad" />
+                                неплохо<br>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" value="good" />
+                                хорошо<br>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" value="super" />
+                                супер<br>
+                            </label>
+                            <label>
+                                <input type="submit" value="Отправить" /><br>
+                            </label>
+                            <i>* - обязательное поле</i><br>
+                            <i>Автофокус в поле поиска</i>
+                        </fieldset>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
