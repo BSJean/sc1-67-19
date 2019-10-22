@@ -22,15 +22,14 @@
             </fieldset>
             <fieldset>
                 <legend>Паспортные данные</legend>
-                <label>
-                    <input type="text" name="surname" maxlength="25" placeholder="Фамилия" required autofocus />&nbsp;text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле<!--Can type 25 symbols maximum-->
+                <label for="series">
+                    text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле
                 </label><br>
-                <label>
-                    <input type="text" name="name" maxlength="20" placeholder="Имя" required />&nbsp;text: Только кириллица, без пробелов, длина поля 20, обязательное поле<!--Can type 25 symbols maximum-->
+                <label for="numberPassport">
+                    text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле
                 </label><br>
-                <label>
-                    <input type="text" name="patronymicName" maxlength="24" placeholder="Отчество" required />&nbsp;text: Только кириллица, без пробелов, длина поля 24, обязательное поле<!--Can type 25 symbols maximum-->
-                </label>
+                    <input type="text" style="width: 30px" name="series" id="series" maxlength="2" placeholder="AA" required /><!--Can type 2 large latin symbols only-->
+                    <input type="text" style="width: 70px" name="numberPassport" id="numberPassport" maxlength="7" placeholder="1234567" required /><!--Can type 7 digits only-->
             </fieldset>
         </form>
     </body>
