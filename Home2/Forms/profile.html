@@ -19,18 +19,97 @@
                 <label>
                     <input type="text" name="patronymicName" maxlength="24" placeholder="Отчество" required/>&nbsp;text: Только кириллица, без пробелов, длина поля 24, обязательное поле<!--Can type 25 symbols maximum-->
                 </label>
-            </fieldset>
-            <fieldset>
-                <legend>Паспортные данные</legend>
-                <label for="series">
-                    text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле
-                </label><br>
-                <label for="numberPassport">
-                    text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле
-                </label><br>
+                <fieldset>
+                    <legend>Паспортные данные</legend>
+                    <label for="series">
+                        text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле
+                    </label><br>
+                    <label for="numberPassport">
+                        text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле
+                    </label><br>
                     <input type="text" style="width: 30px" name="series" id="series" maxlength="2" placeholder="AA" required /><!--Can type 2 large latin symbols only-->
                     <input type="text" style="width: 70px" name="numberPassport" id="numberPassport" maxlength="7" placeholder="1234567" required /><!--Can type 7 digits only-->
-            </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Дата рождения</legend>
+                    <label>
+                        <input type="text" style="width: 50px" name="year" maxlength="4" placeholder="2000" />&nbsp;text: Год рождения 4-е цифры<!--Can type 4 digits only-->
+                    </label><br>
+                    <label>
+                        <select name="month">
+                            &nbsp;select: Месяц рождения<!--Can select one month from list-->
+                            <option value="1" selected>Январь</option>
+                            <option value="2">Февраль</option>
+                            <option value="3">Март</option>
+                            <option value="4">Апрель</option>
+                            <option value="5">Май</option>
+                            <option value="6">Июнь</option>
+                            <option value="7">Июль</option>
+                            <option value="8">Август</option>
+                            <option value="9">Сентябрь</option>
+                            <option value="10">Октябрь</option>
+                            <option value="11">Ноябрь</option>
+                            <option value="12">Декабрь</option>
+                        </select>
+                    </label><br>
+                    <label>
+                        <input type="number" name="day" min="1" max="31" step="1" />&nbsp;number: Диапазон от 1 до 31 с шагом 1<!--Can select only one number from 1 to 31-->
+                    </label>
+                </fieldset>
+                <label>
+                    <select name="nationality" required>
+                        &nbsp;(Национальность - выбор одного значения из списка, обязательное поле)<!--Can select one choice only, required field-->
+                        <option value="1" selected>РБ</option>
+                        <option value="2">RU</option>
+                        <option value="3">EU</option>
+                    </select><br>
+                </label>
+                <label>
+                    Адрес:<br>
+                    <textarea name="address" lang="ru"  style="resize:horizontal; min-width:100px; max-width:300px"></textarea><!--Field for address-->
+                </label><br>
+            </fieldset> 
+            <fieldset>
+                <legend>Интересы</legend>
+                <fieldset>
+                    <legend>array: Хобби</legend>
+                    <label>
+                        <input type="checkbox" name="hobby[]" value="fishing" />&nbsp;Рыбалка
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hobby[]" value="astronomy" />&nbsp;Астрономия
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hobby[]" value="diving" />&nbsp;Дайвинг
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hobby[]" value="philately" />&nbsp;Марки
+                    </label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Домашние животные (возможность выбора нескольких вариантов):</legend>
+                    <label>
+                        array: select multiple<br>
+                        <select name="pets[]" multiple size="12">
+                            <optgroup label="Попугаи">
+                                <option value="wave">Волнистый</option>
+                                <option value="ara">Ара</option>
+                                <option value="lovebird">Неразлучник</option>
+                            </optgroup>
+                            <optgroup label="Рыба">                                
+                                <option value="crucian">Караси</option>
+                                <option value="perch">Окуни</option>
+                                <option value="sturgeon">Осётр</option>
+                            </optgroup>
+                            <optgroup label="Птицы">                                
+                                <option value="crow">Старая ворона</option>
+                                <option value="stork">Аист</option>
+                                <option value="archeopteryx">Археоптерикс</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </fieldset>           
         </form>
     </body>
 </html>
