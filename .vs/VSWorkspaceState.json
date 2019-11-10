@@ -1,13 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Home1",
-    "\\Home1\\AddTaskLinks",
-    "\\Home1\\AddTaskLinks\\about",
-    "\\Home1\\AddTaskLinks\\catalog",
-    "\\Home1\\AddTaskLinks\\news",
-    "\\Home1\\AddTaskLinks\\promo"
+    "\\Home2",
+    "\\Home2\\Forms"
   ],
-  "SelectedNode": "\\Home1\\AddTaskLinks\\about\\contacts.html",
+  "SelectedNode": "\\Home2\\Forms\\forms.html",
   "PreviewInSolutionExplorer": false
 }

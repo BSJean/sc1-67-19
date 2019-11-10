@@ -11,13 +11,13 @@
             <fieldset>
                 <legend>Личные данные</legend>
                 <label>
-                    <input type="text" name="surname" maxlength="25" placeholder="Фамилия" required autofocus/>&nbsp;text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле<!--Can type 25 symbols maximum-->
+                    <input type="text" name="surname" maxlength="25" placeholder="Фамилия" pattern="^[А-Яа-яЁё]+$" required autofocus/>&nbsp;text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле<!--Can type 25 symbols maximum-->
                 </label><br>
                 <label>
-                    <input type="text" name="name" maxlength="20" placeholder="Имя" required/>&nbsp;text: Только кириллица, без пробелов, длина поля 20, обязательное поле<!--Can type 25 symbols maximum-->
+                    <input type="text" name="name" maxlength="20" placeholder="Имя" pattern="^[А-Яа-яЁё]+$" required/>&nbsp;text: Только кириллица, без пробелов, длина поля 20, обязательное поле<!--Can type 25 symbols maximum-->
                 </label><br>
                 <label>
-                    <input type="text" name="patronymicName" maxlength="24" placeholder="Отчество" required/>&nbsp;text: Только кириллица, без пробелов, длина поля 24, обязательное поле<!--Can type 25 symbols maximum-->
+                    <input type="text" name="patronymicName" maxlength="24" placeholder="Отчество" pattern="^[А-Яа-яЁё]+$" required/>&nbsp;text: Только кириллица, без пробелов, длина поля 24, обязательное поле<!--Can type 25 symbols maximum-->
                 </label>
                 <fieldset>
                     <legend>Паспортные данные</legend>
@@ -27,8 +27,8 @@
                     <label for="numberPassport">
                         text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле
                     </label><br>
-                    <input type="text" style="width: 30px" name="series" id="series" maxlength="2" placeholder="AA" required /><!--Can type 2 large latin symbols only-->
-                    <input type="text" style="width: 70px" name="numberPassport" id="numberPassport" maxlength="7" placeholder="1234567" required /><!--Can type 7 digits only-->
+                    <input type="text" style="width: 30px" name="series" id="series" maxlength="2" placeholder="AA" pattern="[A-Z]{2}" required/><!--Can type 2 large latin symbols only-->
+                    <input type="text" style="width: 70px" name="numberPassport" id="numberPassport" maxlength="7" placeholder="1234567" pattern="[0-9]{7}" required /><!--Can type 7 digits only-->
                 </fieldset>
                 <fieldset>
                     <legend>Дата рождения</legend>
@@ -113,10 +113,10 @@
             <fieldset>
                 <legend>Данные для входа и восстановления пароля</legend>
                 <label>
-                    <input type="text" name="login" placeholder="Логин"  minlength="5" maxlength="20" required/>&nbsp;text: Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле<!--Can type 5-20 Roman alphabet symbols only-->
+                    <input type="text" name="login" placeholder="Логин"  minlength="5" maxlength="20" pattern="[A-Za-z]{5,}" required />&nbsp;text: Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле<!--Can type 5-20 Roman alphabet symbols only-->
                 </label><br>
                 <label>
-                    <input type="password" name="password" placeholder="Пароль" minlength="10" maxlength="20" required autocomplete="off" />&nbsp;password: Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение<!--Can type 10-20 Roman alphabet symbols only-->
+                    <input type="password" name="password" placeholder="Пароль" minlength="10" maxlength="20" pattern="[A-Za-z]{10,}" required autocomplete="off" />&nbsp;password: Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение<!--Can type 10-20 Roman alphabet symbols only-->
                 </label>
             </fieldset>  
             <fieldset>
@@ -142,7 +142,7 @@
                 <input type="submit" value="Отправить" />
                 <input type="reset" value="Сбросить" /><br>
                 <label>
-                    <input type="image" name="img_email" src="/images/email.jpg" alt="email" align="top" />- при нажатии на эту кнопку ничего не происходит
+                    <input type="image" name="img_email" src="/images/email.jpg" alt="email" style="vertical-align:top"/>- при нажатии на эту кнопку ничего не происходит
                 </label>
             </fieldset>
         </form>
